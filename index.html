@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Futebol Hub - resultados, classificação e próximos jogos.">
-    <title>Futebol Hub</title>
+
+    <title>Futebol Hub | Quiz</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,316 +15,220 @@
 
 <body>
 
-    <header class="header">
-        <div class="container nav">
-            <a href="#" class="logo">
-                <span class="logo-ball">⚽</span>
-                FUTEBOL<span>HUB</span>
-            </a>
+<header class="header">
+    <div class="container nav">
 
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#jogos">Jogos</a>
-                <a href="#tabela">Tabela</a>
-                <a href="#noticias">Notícias</a>
-            </nav>
+        <a href="#" class="logo">
+            ⚽ FUTEBOL<span>HUB</span>
+        </a>
 
-            <button class="menu-btn" id="menuBtn">☰</button>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="tag">⚡ DESAFIO DE FUTEBOL</span>
+
+                <h1>
+                    Você realmente
+                    <span>entende de futebol?</span>
+                </h1>
+
+                <p>
+                    Teste seus conhecimentos sobre futebol brasileiro,
+                    mundial, grandes jogadores e momentos históricos.
+                </p>
+
+                <a href="#quiz" class="btn primary">
+                    Começar quiz
+                </a>
+
+            </div>
+
+            <div class="hero-ball">
+                ⚽
+            </div>
+
         </div>
-    </header>
 
-    <main>
+    </section>
 
-        <!-- HERO -->
-        <section class="hero" id="inicio">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <span class="tag">⚡ CENTRAL DO FUTEBOL</span>
 
-                    <h1>
-                        O futebol que você
-                        <span>vive.</span>
-                    </h1>
+    <!-- QUIZ -->
 
-                    <p>
-                        Resultados, classificação, próximos jogos e tudo
-                        que acontece dentro das quatro linhas.
+    <section class="quiz-section" id="quiz">
+
+        <div class="container">
+
+            <div class="quiz-box">
+
+                <div class="quiz-header">
+
+                    <div>
+                        <span class="eyebrow">QUIZ DE FUTEBOL</span>
+
+                        <h2 id="questionNumber">
+                            Pergunta 1 de 10
+                        </h2>
+                    </div>
+
+                    <div class="score-box">
+                        <span>PONTOS</span>
+                        <strong id="score">0</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- BARRA DE PROGRESSO -->
+
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+
+                <!-- PERGUNTA -->
+
+                <div class="question-area">
+
+                    <span class="question-category" id="category">
+                        Futebol
+                    </span>
+
+                    <h3 id="question">
+                        Carregando pergunta...
+                    </h3>
+
+                </div>
+
+
+                <!-- ALTERNATIVAS -->
+
+                <div class="answers" id="answers"></div>
+
+
+                <!-- RESULTADO -->
+
+                <div class="result" id="result">
+
+                    <div class="result-icon">
+                        🏆
+                    </div>
+
+                    <span class="eyebrow">
+                        QUIZ FINALIZADO
+                    </span>
+
+                    <h2 id="resultTitle">
+                        Excelente!
+                    </h2>
+
+                    <p id="resultText">
+                        Você terminou o desafio.
                     </p>
 
-                    <div class="hero-buttons">
-                        <a href="#jogos" class="btn primary">Ver jogos</a>
-                        <a href="#tabela" class="btn secondary">Classificação</a>
-                    </div>
-                </div>
-
-                <div class="hero-card">
-                    <div class="live">
-                        <span></span> AO VIVO
+                    <div class="final-score">
+                        <span>SUA PONTUAÇÃO</span>
+                        <strong id="finalScore">0</strong>
                     </div>
 
-                    <p class="competition">CAMPEONATO NACIONAL</p>
-
-                    <div class="match">
-                        <div class="team">
-                            <div class="team-logo green">PAL</div>
-                            <strong>Palmeiras</strong>
-                        </div>
-
-                        <div class="score">
-                            <span>2</span>
-                            <small>:</small>
-                            <span>1</span>
-                            <small>78'</small>
-                        </div>
-
-                        <div class="team">
-                            <div class="team-logo blue">SAN</div>
-                            <strong>Santos</strong>
-                        </div>
-                    </div>
-
-                    <div class="match-status">
-                        Segundo tempo
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- JOGOS -->
-        <section class="section" id="jogos">
-            <div class="container">
-
-                <div class="section-title">
-                    <div>
-                        <span class="eyebrow">AGENDA</span>
-                        <h2>Jogos de hoje</h2>
-                    </div>
-
-                    <button class="filter-btn" id="filterBtn">
-                        Todos os jogos
+                    <button class="btn primary" id="restartBtn">
+                        Jogar novamente
                     </button>
-                </div>
-
-                <div class="games-grid">
-
-                    <article class="game-card">
-                        <div class="game-top">
-                            <span>Brasileirão</span>
-                            <span>16:00</span>
-                        </div>
-
-                        <div class="teams">
-                            <div>
-                                <div class="club red">FLA</div>
-                                <strong>Flamengo</strong>
-                            </div>
-
-                            <div class="vs">VS</div>
-
-                            <div>
-                                <div class="club black">BOT</div>
-                                <strong>Botafogo</strong>
-                            </div>
-                        </div>
-
-                        <button class="details">Detalhes →</button>
-                    </article>
-
-                    <article class="game-card featured">
-                        <div class="game-top">
-                            <span>Brasileirão</span>
-                            <span>18:30</span>
-                        </div>
-
-                        <div class="teams">
-                            <div>
-                                <div class="club green">PAL</div>
-                                <strong>Palmeiras</strong>
-                            </div>
-
-                            <div class="vs">VS</div>
-
-                            <div>
-                                <div class="club blue">GRE</div>
-                                <strong>Grêmio</strong>
-                            </div>
-                        </div>
-
-                        <button class="details">Detalhes →</button>
-                    </article>
-
-                    <article class="game-card">
-                        <div class="game-top">
-                            <span>Brasileirão</span>
-                            <span>21:00</span>
-                        </div>
-
-                        <div class="teams">
-                            <div>
-                                <div class="club blue">COR</div>
-                                <strong>Corinthians</strong>
-                            </div>
-
-                            <div class="vs">VS</div>
-
-                            <div>
-                                <div class="club red">SAO</div>
-                                <strong>São Paulo</strong>
-                            </div>
-                        </div>
-
-                        <button class="details">Detalhes →</button>
-                    </article>
 
                 </div>
-            </div>
-        </section>
 
-        <!-- TABELA -->
-        <section class="section dark-section" id="tabela">
-            <div class="container">
 
-                <div class="section-title">
-                    <div>
-                        <span class="eyebrow">CAMPEONATO</span>
-                        <h2>Classificação</h2>
-                    </div>
-                </div>
+                <!-- RODAPÉ DO QUIZ -->
 
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Time</th>
-                                <th>J</th>
-                                <th>V</th>
-                                <th>E</th>
-                                <th>D</th>
-                                <th>PTS</th>
-                            </tr>
-                        </thead>
+                <div class="quiz-footer">
 
-                        <tbody>
-                            <tr>
-                                <td class="position">1</td>
-                                <td class="club-name">🟢 Palmeiras</td>
-                                <td>12</td>
-                                <td>9</td>
-                                <td>2</td>
-                                <td>1</td>
-                                <td class="points">29</td>
-                            </tr>
+                    <span id="feedback"></span>
 
-                            <tr>
-                                <td class="position">2</td>
-                                <td class="club-name">🔴 Flamengo</td>
-                                <td>12</td>
-                                <td>8</td>
-                                <td>3</td>
-                                <td>1</td>
-                                <td class="points">27</td>
-                            </tr>
-
-                            <tr>
-                                <td class="position">3</td>
-                                <td class="club-name">⚫ Botafogo</td>
-                                <td>12</td>
-                                <td>7</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td class="points">23</td>
-                            </tr>
-
-                            <tr>
-                                <td class="position">4</td>
-                                <td class="club-name">🔵 Grêmio</td>
-                                <td>12</td>
-                                <td>6</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td class="points">21</td>
-                            </tr>
-
-                            <tr>
-                                <td class="position">5</td>
-                                <td class="club-name">⚪ Santos</td>
-                                <td>12</td>
-                                <td>5</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td class="points">18</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- NOTÍCIAS -->
-        <section class="section" id="noticias">
-            <div class="container">
-
-                <div class="section-title">
-                    <div>
-                        <span class="eyebrow">ATUALIZAÇÕES</span>
-                        <h2>Últimas notícias</h2>
-                    </div>
-                </div>
-
-                <div class="news-grid">
-
-                    <article class="news-card">
-                        <div class="news-image green-bg">⚽</div>
-                        <div class="news-content">
-                            <span>Mercado da bola</span>
-                            <h3>Grandes clubes começam a movimentar o mercado</h3>
-                            <p>Confira as principais novidades dos times.</p>
-                            <a href="#">Ler notícia →</a>
-                        </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-image blue-bg">🏆</div>
-                        <div class="news-content">
-                            <span>Campeonato</span>
-                            <h3>Disputa pelo título fica cada vez mais acirrada</h3>
-                            <p>Veja como está a briga pelas primeiras posições.</p>
-                            <a href="#">Ler notícia →</a>
-                        </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-image dark-bg">🔥</div>
-                        <div class="news-content">
-                            <span>Destaque</span>
-                            <h3>Atacante vive grande fase na temporada</h3>
-                            <p>Jogador já marcou vários gols no campeonato.</p>
-                            <a href="#">Ler notícia →</a>
-                        </div>
-                    </article>
+                    <button
+                        class="next-btn"
+                        id="nextBtn"
+                        disabled
+                    >
+                        Próxima →
+                    </button>
 
                 </div>
 
             </div>
-        </section>
 
-    </main>
-
-    <footer>
-        <div class="container footer-content">
-            <div>
-                <a href="#" class="logo">
-                    ⚽ FUTEBOL<span>HUB</span>
-                </a>
-                <p>Paixão pelo futebol, informação em um só lugar.</p>
-            </div>
-
-            <p>© 2026 Futebol Hub. Projeto demonstrativo.</p>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="about" id="sobre">
+
+        <div class="container">
+
+            <span class="eyebrow">
+                FUTEBOL HUB
+            </span>
+
+            <h2>
+                Conhecimento também faz parte do jogo.
+            </h2>
+
+            <p>
+                Responda às perguntas, acumule pontos e descubra
+                quanto você realmente sabe sobre o mundo do futebol.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+            <a href="#" class="logo">
+                ⚽ FUTEBOL<span>HUB</span>
+            </a>
+
+            <p>
+                Paixão pelo futebol. Desafio para os fãs.
+            </p>
+        </div>
+
+        <p>
+            © 2026 Futebol Hub
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
